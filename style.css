@@ -1,0 +1,87 @@
+.container {
+  position: absolute;
+  bottom: 0;
+  transition: transform 0.2 linear;
+  transform: translateX(-400px);
+  /* animation: drive 0s linear infinite; */
+}
+
+body {
+  text-align: center;
+  background-color: #f4f4f4;
+  height: 100vh;
+}
+
+span {
+  background: #f4f4f4;
+}
+
+.rwida1, .rwida2 {
+  border: 6px solid black;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #30CC2E;
+  position: absolute;
+  top: 55%;
+  /* animation: turn 0s linear infinite */
+}
+
+.rwida1 {
+  left: 32px;
+}
+
+.rwida2 {
+  left: 242px;
+}
+
+@keyframes drive {
+  0% {
+    transform: translateX(-400px);
+  }
+  100% {
+    transform: translateX(90vw);
+  }
+}
+
+@keyframes turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.navigation {
+  display: inline-flex;
+  margin: auto;
+  margin-top: 160px;
+}
+
+.navigation .nav-button {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px 16px;
+}
+
+.navigation p {
+  font-size: 20px;
+  font-family: monospace;
+  margin: 10px 10px;
+}
+
+.fin_ghadi {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  opacity: 0;
+  z-index: -1;
+}
+
+.fin_ghadi.active {
+  opacity: 1;
+  z-index: 10;
+}
